@@ -3,7 +3,7 @@ package com.example.demo;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-
+ 
 public interface QuestionRepository extends JpaRepository<Question, Integer>{
 	// Repository doesn't provide findBySubject
 	//   You can use findBySubject without overwriting method
