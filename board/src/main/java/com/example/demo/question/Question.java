@@ -1,7 +1,9 @@
-package com.example.demo;
+package com.example.demo.question;
 
 import java.time.LocalDateTime;
 import java.util.List;
+
+import com.example.demo.answer.Answer;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -33,5 +35,5 @@ public class Question {
 	//CasecadeType.REMOVE = removes all answers when question is removed
 	@OneToMany(mappedBy = "question", cascade = CascadeType.REMOVE)
 	private List<Answer> answerList;
-	
+	 
 }

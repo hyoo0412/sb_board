@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout}">
+	<head>
+		<meta charset="UTF-8">
+		<title>Question Form</title>
+	</head>
+	<body>
+		<div layout:fragment="content" class="container">
+		
+			<h5 class="my-3 border-bottom pb-2">Write Question</h5>
+			<form th:action="@{/question/create}" method="POST">
+				<div class="mb-3">
+					<label for="subject" class="form-label">Title</label>
+					<input type="text" name="subject" id="subject" class="form-control">
+				</div>
+				<div class="mb-3">
+					<label for="content" class="form-label">Content</label>
+					<textarea name="content" id="content" class="form-control" rows="10"></textarea>
+				</div>
+				<input type="submit" value="Save" class="btn btn-primary my-2">
+			</form>
+		</div>
+	</body>
+</html>
